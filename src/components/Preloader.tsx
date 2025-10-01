@@ -1,23 +1,23 @@
 "use client";
 
-import React, { useEffect, useState } from "react";// adjust path to your logo
+import React, { useEffect, useState } from "react";
 
 const Preloader: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading (replace with real loading logic if needed)
+    // Simulate loading
     const timer = setTimeout(() => setLoading(false), 2000); // 2 seconds
     return () => clearTimeout(timer);
   }, []);
 
-  if (!loading) return null; // Hide preloader when loading is done
+  if (!loading) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
-      <div className="flex flex-col items-center animate-pulse">
-        <img src="/logo.png" alt="Logo" className="w-32 h-32 mb-4" />
-        <p className="text-gray-500 text-lg">Your Placement Our Support...</p>
+    <div className="preloader">
+      <div className="preloader-content">
+        <img src="/logo.png" alt="Logo" className="preloader-logo dark:text-white" />
+        <p className="preloader-text">Your Placement Our Support...</p>
       </div>
     </div>
   );

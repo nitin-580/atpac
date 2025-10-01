@@ -3,9 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Lato } from "next/font/google";
 import { Poppins } from "next/font/google";
-import Navigation from "../components/Navigation"
+import Navbar from "@/components/Navigation";
 import Footer from "../components/Footer"
-
+import { ThemeProvider } from "../components/themeProvider"; // <-- 1. IMPORT THE PROVIDER
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "300", "400", "500", "600", "700", "900"], // pick weights you need
@@ -41,13 +41,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${poppins.className} antialiased`}
       >
-        <Navigation />
-        {children}
-        <Footer />
+       <ThemeProvider 
+          attribute="class"
+          disableTransitionOnChange
+        >
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

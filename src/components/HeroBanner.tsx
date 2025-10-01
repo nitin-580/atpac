@@ -3,28 +3,27 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import ContactUs from "./ContactUs"; // Assuming you have this component
 
 export default function Hero() {
   const [isContactOpen, setIsContactOpen] = useState(false);
 
   return (
-    <section className="bg-white py-12 px-6 lg:px-20 mt-20">
+    <section className="py-12 px-6 lg:px-20 mt-20">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Left Content */}
         <div>
           <div className="flex items-center gap-2 mb-4">
             <div className="w-3 h-3 bg-blue-600 rounded-sm"></div>
-            <span className="text-sm font-bold tracking-wide text-gray-800">
+            <span className="text-sm font-bold tracking-wide">
               Alumni Training and Placement Council
             </span>
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
+          <h1 className="text-4xl md:text-5xl font-extrabold   mb-6 leading-tight">
             Students&apos; Career Development Cell &quot;(CDC)&quot;
           </h1>
 
-          <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+          <p className="text-lg  mb-8 leading-relaxed">
             The Students&apos; Placement Office (SPO), SVNIT is maintained and
             managed by a dedicated team of office staff and students who are
             responsible for all areas of SVNIT placements. The SPO team assists
@@ -42,7 +41,7 @@ export default function Hero() {
             </button>
             <a
               href="#"
-              className="font-bold text-gray-800 hover:text-blue-600 transition"
+              className="font-bold text-white hover:text-blue-600 transition"
             >
               Recruitment Portal →
             </a>

@@ -25,8 +25,8 @@ const newsItems = [
 
 const NewsSection = () => {
   return (
-    <section className="bg-gray-50 py-16 px-8 md:px-16">
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+    <section className="py-16 px-8 md:px-16">
+      <h2 className="text-3xl font-bold dark:text-white mb-8 text-center">
         Latest News
       </h2>
       <div className="grid md:grid-cols-3 gap-8">

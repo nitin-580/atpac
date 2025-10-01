@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee"; // install: npm install react-fast-mar
 // import your recruiter logo
 const Recruiters = () => {
   return (
-    <section className="bg-gray-50 py-10">
+    <section className="bg-white py-10">
       <h2 className="text-center text-2xl md:text-3xl font-bold text-gray-800 mb-8">
         PROUD RECRUITERS
       </h2>

@@ -20,26 +20,36 @@ const ChairpersonHero = () => {
   }, []);
 
   return (
-    <div className="flex flex-col md:flex-row items-center bg-gray-100 p-8 md:p-16">
+    <div className="chairperson-hero">
       {/* Left side: Chairperson photo and messages */}
-      <div className="md:w-1/2 flex flex-col items-center md:items-start">
+      <div className="chairperson-content flex mx-auto">
         <img
           src="/logo.png"
           alt="Chairperson"
-          className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-gray-300 mb-6"
+          className="chairperson-image mx-auto"
         />
-        <div className="w-full max-w-md relative">
+        <div className="chairperson-message-wrapper flex justify-center mx-auto text-center">
           <AnimatePresence mode="wait">
+            {/* Corrected: Message is wrapped in a motion.p tag with a key */}
+            <motion.p
+              key={current}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5 }}
+              >
+              {messages[current]}
+            </motion.p>
           </AnimatePresence>
         </div>
       </div>
 
       {/* Right side: optional hero content */}
-      <div className="md:w-1/2 mt-10 md:mt-0 md:pl-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
+      <div className="chairperson-hero-text flex flex-col items-center text-center mt-8">
+        <h1 className="chairperson-title">
           Messages from our Chairperson
         </h1>
-        <p className="text-gray-700 text-lg">
+        <p className="chairperson-subtitle dark:text-slate-400 text-black">
           Here you can read the latest messages and updates from our leadership.
         </p>
       </div>

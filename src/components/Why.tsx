@@ -41,36 +41,28 @@ const features = [
 
 export default function Why() {
   return (
-    <section className="bg-gray-50 py-16 px-6 lg:px-20">
-      <div className="max-w-7xl mx-auto text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-          Why Choose SVNIT?
-        </h2>
-        <p className="mt-4 text-gray-600 text-lg">
+    <section className="why-section">
+      {/* Header */}
+      <div className="why-header">
+        <h2 className="why-title">Why Choose SVNIT?</h2>
+        <p className="why-subtitle">
           Discover what makes us one of the top engineering institutes in India.
         </p>
       </div>
 
       {/* Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="features-grid">
         {features.map((feature) => (
-          <div
-            key={feature.title}
-            className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition"
-          >
+          <div key={feature.title} className="feature-card">
             <Image
               src={feature.icon}
               alt={feature.title}
               width={80}
               height={80}
-              className="mb-4"
+              className="feature-icon"
             />
-            <h3 className="text-lg font-bold text-gray-900 mb-2">
-              {feature.title}
-            </h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              {feature.description}
-            </p>
+            <h3 className="feature-title">{feature.title}</h3>
+            <p className="feature-description">{feature.description}</p>
           </div>
         ))}
       </div>
