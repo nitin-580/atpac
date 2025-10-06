@@ -136,7 +136,7 @@ const InternshipsPage: React.FC = () => {
     <section className="py-12 bg-slate-50 dark:bg-slate-900 min-h-screen transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-5">
         <h1 className="text-4xl font-extrabold text-center mb-12 mt-20 text-slate-900 dark:text-white">
-          Available Internships
+          Past Internships
         </h1>
 
         {internships.length > 0 ? (

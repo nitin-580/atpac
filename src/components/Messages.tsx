@@ -47,10 +47,16 @@ const ChairpersonHero = () => {
       {/* Right side: optional hero content */}
       <div className="chairperson-hero-text flex flex-col items-center text-center mt-8">
         <h1 className="chairperson-title">
-          Messages from our Chairperson
+          Messages from our Secretary
         </h1>
         <p className="chairperson-subtitle dark:text-slate-400 text-black">
-          Here you can read the latest messages and updates from our leadership.
+        Greetings!
+
+As the Secretary of the Alumni, Training, and Placement Affairs Council (ATPAC), it is my privilege to connect with you. Our mission is to bridge the gap between talented students and leading organizations, ensuring every opportunity is explored and every potential is realized.
+
+At ATPAC, we work tirelessly alongside our dedicated team to provide guidance, mentorship, and seamless support for both students and recruiters. Your trust in us motivates our continuous efforts to enhance career pathways and strengthen industry connections.
+
+We look forward to collaborating with students, alumni, and organizations alike, creating meaningful experiences that shape successful careers. Together, let’s build a future full of promise and achievement.
         </p>
       </div>
     </div>

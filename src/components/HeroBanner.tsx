@@ -17,21 +17,16 @@ export default function Hero() {
           <div className="flex items-center gap-2 mb-4 justify-center md:justify-start">
             <div className="w-3 h-3 bg-blue-600 rounded-sm"></div>
             <span className="text-sm font-bold tracking-wide text-slate-600 dark:text-slate-400">
-              Alumni Training and Placement Council
+              Alumni Training and Placement Affairs Council
             </span>
           </div>
 
           <h1 className="text-3xl sm:text-2xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white mb-6 leading-tight">
-            Students&apos; Career Development Cell (CDC)
+           Career Development Cell (CDC)
           </h1>
 
           <p className="text-lg text-slate-700 dark:text-slate-300 mb-8 leading-relaxed">
-            The Students&apos; Placement Office (SPO), SVNIT is maintained and
-            managed by a dedicated team of office staff and students who are
-            responsible for all areas of SVNIT placements. The SPO team assists
-            recruiters to the best of its ability. We are grateful for the trust
-            placed in us by various organisations, and we hope to continue
-            working with them in the future.
+          Welcome to the Career Development Cell (CDC) at SVNIT – where careers take off! Our energetic team of students and mentors is here to guide, inspire, and connect you with amazing opportunities. We work hand-in-hand with companies and the student community to ensure every talent finds their spotlight.
           </p>
 
           {/* IMPROVEMENT: Buttons are centered on mobile and left-aligned on desktop. */}

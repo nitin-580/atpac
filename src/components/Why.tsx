@@ -14,7 +14,7 @@ const features = [
     icon: "/nirf.png",
   },
   {
-    title: "Alumni",
+    title: "Alumni Network",
     description:
       "Our alumni have made their mark globally, occupying leading positions in corporate, academia & the government.",
     icon: "/aalogo.png",
