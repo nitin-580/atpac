@@ -38,18 +38,18 @@ const navLinks: NavLink[] = [
   {
     title: "Placement",
     subLinks: [
-      { title: "Placement Data", href: "/placementData" },
+      { title: "Company Data", href: "/placementData" },
       { title: "Placement Stats", href: "/placementStats" },
     ],
   },
-  {
-    title: "Alumni",
-    subLinks: [
-      { title: "Alumni Network", href: "#" },
-      { title: "Success Stories", href: "#" },
-      { title: "Give Back", href: "#" },
-    ],
-  },
+  // {
+  //   title: "Alumni",
+  //   subLinks: [
+  //     { title: "Alumni Network", href: "#" },
+  //     { title: "Success Stories", href: "#" },
+  //     { title: "Give Back", href: "#" },
+  //   ],
+  // },
 ];
 
 const Navbar = () => {
