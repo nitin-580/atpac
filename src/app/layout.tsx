@@ -5,7 +5,8 @@ import { Lato } from "next/font/google";
 import { Poppins } from "next/font/google";
 import Navbar from "@/components/Navigation";
 import Footer from "../components/Footer"
-import { ThemeProvider } from "../components/themeProvider"; // <-- 1. IMPORT THE PROVIDER
+import { ThemeProvider } from "../components/themeProvider"; 
+import { Toaster } from "react-hot-toast"; 
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "300", "400", "500", "600", "700", "900"], // pick weights you need
@@ -50,6 +51,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
+           <Toaster position="top-right" reverseOrder={false} />
           {children}
           <Footer />
         </ThemeProvider>

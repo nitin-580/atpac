@@ -36,8 +36,11 @@ const navLinks: NavLink[] = [
     ],
   },
   {
-    title: "Placement Data",
-    href: "/placementStats",
+    title: "Placement",
+    subLinks: [
+      { title: "Placement Data", href: "/placementData" },
+      { title: "Placement Stats", href: "/placementStats" },
+    ],
   },
   {
     title: "Alumni",

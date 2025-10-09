@@ -31,7 +31,7 @@ const Footer = () => {
 
       {/* Bottom small text */}
       <div className="text-center text-gray-500 text-xs mt-6">
-      Designed & Developed by <span><Link href="/" className="text-blue-500 text-lg">Nitin Kumar</Link></span>
+      Designed & Developed by <span><Link href="/" className="text-blue-500 text-lg">ATPAC - SVNIT</Link></span>
       </div>
       <div className="text-center text-gray-500 text-xs mt-6">
         © {new Date().getFullYear()} ATPAC - SVNIT. All Rights Reserved.
