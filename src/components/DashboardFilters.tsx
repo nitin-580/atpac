@@ -3,17 +3,29 @@
 interface Filters {
   batchYear: number;
   degree: string;
+  department: string;
 }
 
 interface DashboardFiltersProps {
   filters: Filters;
   onFilterChange: (newFilters: Filters) => void;
+  departmentOptions: string[];
   disabled: boolean;
 }
 
-export default function DashboardFilters({ filters, onFilterChange, disabled }: DashboardFiltersProps) {
+export default function DashboardFilters({ filters, onFilterChange, departmentOptions, disabled }: DashboardFiltersProps) {
+  
+  // When degree changes, reset department to "All Departments"
+  const handleDegreeChange = (newDegree: string) => {
+    onFilterChange({
+      ...filters,
+      degree: newDegree,
+      department: 'All Departments'
+    });
+  };
+
   return (
-    <div className="flex flex-col sm:flex-row gap-4 mb-8 p-4 bg-white dark:bg-slate-800 rounded-lg shadow-md transition-colors duration-300">
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 p-4 bg-white dark:bg-slate-800 rounded-lg shadow-md">
       <div>
         <label htmlFor="batchYear" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Batch Year</label>
         <select
@@ -34,12 +46,26 @@ export default function DashboardFilters({ filters, onFilterChange, disabled }: 
           id="degree"
           value={filters.degree}
           disabled={disabled}
-          onChange={(e) => onFilterChange({ ...filters, degree: e.target.value })}
+          onChange={(e) => handleDegreeChange(e.target.value)}
           className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md disabled:opacity-50"
         >
           <option>BTech</option>
           <option>MTech</option>
           <option>MSc</option>
+        </select>
+      </div>
+       <div>
+        <label htmlFor="department" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Department</label>
+        <select
+          id="department"
+          value={filters.department}
+          disabled={disabled || departmentOptions.length <= 1}
+          onChange={(e) => onFilterChange({ ...filters, department: e.target.value })}
+          className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md disabled:opacity-50"
+        >
+          {departmentOptions.map(opt => (
+            <option key={opt} value={opt}>{opt}</option>
+          ))}
         </select>
       </div>
     </div>
