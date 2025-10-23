@@ -97,7 +97,7 @@ export default function Page() {
     });
     return Array.from(companyMap.entries())
       .sort(([, a], [, b]) => b - a)
-      .slice(0, 15)
+      .slice(0, 7)
       .map(([name, count]) => ({ name, count }));
   }, [placements]);
   
@@ -131,8 +131,15 @@ export default function Page() {
                 <DepartmentPerformanceChart data={stats} />
               </div>
               <div className="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-md">
-                <h2 className="text-xl font-semibold text-gray-700 dark:text-gray-200 mb-4">Overall Batch Status</h2>
-                <BatchStatusChart data={stats} />
+                <h2 className="text-xl font-semibold text-gray-700 dark:text-gray-200 mb-4">
+                  {filters.department === 'All Departments' 
+                    ? 'Overall Batch Status' 
+                    : `${filters.department} Status`}
+                </h2>
+                <BatchStatusChart 
+                  data={stats} 
+                  selectedDepartment={filters.department} 
+                />
               </div>
             </div>
             <div className="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-md">
